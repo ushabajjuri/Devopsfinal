@@ -1,6 +1,12 @@
 pipeline {
     agent any
     stages {
+        stage('Deploy') {
+            steps {
+               echo "Test successful"
+              bat "mvn compile"
+            }
+        }
         stage('Build') {
             steps {
                echo "build successful"
@@ -13,11 +19,6 @@ pipeline {
               bat "mvn test"
             }
         }
-        stage('Deploy') {
-            steps {
-               echo "Test successful"
-              bat "mvn deploy"
-            }
-        }
+        
     }
 }
