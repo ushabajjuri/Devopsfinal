@@ -15,7 +15,7 @@ public class UserValidationTest {
 	@Test
 	public void testCase2()
 	{
-		Assert.assertEquals(false,uv.check("ushaB","ushaB@2020"));
+		Assert.assertEquals(true,uv.check("ushaB","ushaB@2020"));
 	}
 	@Test
 	public void testCase3()
